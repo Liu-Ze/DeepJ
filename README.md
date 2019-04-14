@@ -21,3 +21,9 @@
 
 ## RUN img2midi
 `python img2midi.py --model archives/model.pt --fname test.jpg [--arch resnet18 --style w1 w2 w3 w4 ...]`
+
+## music style
+- Baroque(巴洛克): 俗丽凌乱, 运动, 转变
+- Classical(古典主义): 平衡, 清晰, 刚毅
+- Romantic(浪漫主义): 情感热烈, 激情, 直觉, 想像力
+- Modern(现代主义)
