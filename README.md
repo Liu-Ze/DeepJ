@@ -21,7 +21,7 @@
 - `python run_placesCNN_basic.py`
 
 ## RUN img2midi
-`python img2midi.py --model archives/model.pt --fname test.jpg [--arch resnet18 --style w1 w2 w3 w4 ...]`
+- `python img2midi.py --model archives/model.pt --fname test.jpg [--arch resnet18 --style w1 w2 w3 w4 ...]`
 
 ## music style
 - Baroque(巴洛克): 俗丽凌乱, 运动, 转变
