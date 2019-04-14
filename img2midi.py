@@ -67,6 +67,7 @@ def main():
     # load the test image
     img_name = args.fname
     if not os.access(img_name, os.W_OK):
+        img_name = '12.jpg'
         img_url = 'http://places.csail.mit.edu/demo/' + img_name
         os.system('wget ' + img_url)
 
