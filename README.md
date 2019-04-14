@@ -16,4 +16,4 @@ Recent advances in deep neural networks have enabled algorithms to compose music
 - `git clone https://github.com/Liu-Ze/DeepJ.git`
 - `cd DeepJ`
 - `pip install -r requirements.txt`
-- `python generate.py --model archives/model.pt --style w1 w2 w3 w4 (wi means the weight of style i )`
+- `python generate.py --model archives/model.pt --style w1 w2 w3 w4 (wi means the weight of style i : [Baroque, Classical, Romantic, Modern])`
