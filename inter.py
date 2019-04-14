@@ -9,4 +9,4 @@ classes = tuple(classes)
 for cls in classes:
     music = input('Enter the label of {}:'.format(cls))
     with open('musiclabel.txt', 'a') as f:
-        f.write("%s\n" % music)
+        f.write("%s:%s\n" % (cls,music))
