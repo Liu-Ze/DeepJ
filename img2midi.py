@@ -20,7 +20,7 @@ def main():
     parser = argparse.ArgumentParser(description='Generates music.')
     # place365 related
     parser.add_argument('--arch', default='resnet18', help='the architecture to use')
-    parser.add_argument('--fname', default='resnet18', help='the image path to process')
+    parser.add_argument('--fname', default='12.jpg', help='the image path to process')
     # deepj related
     parser.add_argument('--model', help='Path to DeepJ model file')
     parser.add_argument('--length', default=5000, type=int, help='Length of generation')
@@ -67,7 +67,6 @@ def main():
     # load the test image
     img_name = args.fname
     if not os.access(img_name, os.W_OK):
-        img_name = '12.jpg'
         img_url = 'http://places.csail.mit.edu/demo/' + img_name
         os.system('wget ' + img_url)
 
