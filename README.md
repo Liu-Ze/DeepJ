@@ -7,7 +7,6 @@ Recent advances in deep neural networks have enabled algorithms to compose music
 ## Requirements
 - Python 3.5
 - cuda 9.0
-.
 
 ## Install
 - `require: python 3.5 cuda9.0`
