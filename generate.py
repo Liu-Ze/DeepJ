@@ -105,21 +105,17 @@ def main():
     parser.add_argument('--fname', default='output', help='Name of the output file')
     parser.add_argument('--model', help='Path to model file')
     parser.add_argument('--length', default=5000, type=int, help='Length of generation')
-    parser.add_argument('--style', default=None, type=int, nargs='+', help='Specify the styles to mix together. By default will generate all possible styles.')
+    parser.add_argument('--style', default=None, type=int, nargs=4, help='Specify the styles to mix together. By default will generate all possible styles.')
     parser.add_argument('--temperature', default=0.9, type=float, help='Temperature of generation')
     parser.add_argument('--beam', default=1, type=int, help='Beam size')
     parser.add_argument('--adaptive', default=False, action='store_true', help='Adaptive temperature')
     parser.add_argument('--synth', default=False, action='store_true', help='Synthesize output in MP3')
     args = parser.parse_args()
 
-    styles = []
+    
+    styles = np.array([v for v in args.style])
+    styles = [styles/styles.sum()]
 
-    if args.style:
-        # Custom style
-        styles = [np.mean([one_hot(i, NUM_STYLES) for i in args.style], axis=0)]
-    else:
-        # Generate all possible style
-        styles = [one_hot(i, NUM_STYLES) for i in range(len(STYLES))]
     
     print('=== Loading Model ===')
     print('Path: {}'.format(args.model))
