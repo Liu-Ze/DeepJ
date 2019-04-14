@@ -6,11 +6,7 @@ with open(file_name) as class_file:
         classes.append(line.strip().split(' ')[0][3:])
 classes = tuple(classes)
 
-musiclabel = list()
 for cls in classes:
     music = input('Enter the label of {}:'.format(cls))
-    musiclabel.append(music)
-
-with open('musiclabel.txt', 'w') as f:
-    for item in musiclabel:
-        f.write("%s\n" % item)
+    with open('musiclabel.txt', 'a') as f:
+        f.write("%s\n" % music)
