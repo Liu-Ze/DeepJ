@@ -13,6 +13,7 @@
 - `cd DeepJ`
 - `pip install -r requirements.txt`
 - `conda install pytorch torchvision cudatoolkit=9.0 -c pytorch`
+
 ## RUN DEEPJ
 - `python generate.py --model archives/model.pt --style w1 w2 w3 w4 (wi means the weight of style i : [Baroque, Classical, Romantic, Modern])`
 
@@ -27,3 +28,4 @@
 - Classical(古典主义): 平衡, 清晰, 刚毅
 - Romantic(浪漫主义): 情感热烈, 激情, 直觉, 想像力
 - Modern(现代主义)
+
