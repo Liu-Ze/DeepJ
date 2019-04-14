@@ -1,8 +1,4 @@
-# DeepJ: A model for style-specific music generation
-https://arxiv.org/abs/1801.00887
-
-## Abstract
-Recent advances in deep neural networks have enabled algorithms to compose music that is comparable to music composed by humans. However, few algorithms allow the user to generate music with tunable parameters. The ability to tune properties of generated music will yield more practical benefits for aiding artists, filmmakers, and composers in their creative tasks. In this paper, we introduce DeepJ - an end-to-end generative model that is capable of composing music conditioned on a specific mixture of composer styles. Our innovations include methods to learn musical style and music dynamics. We use our model to demonstrate a simple technique for controlling the style of generated music as a proof of concept. Evaluation of our model using human raters shows that we have improved over the Biaxial LSTM approach.
+# img2midi: A model for midi generation using image
 
 ## Requirements
 - Python 3.5
@@ -17,4 +13,11 @@ Recent advances in deep neural networks have enabled algorithms to compose music
 - `cd DeepJ`
 - `pip install -r requirements.txt`
 - `conda install pytorch torchvision cudatoolkit=9.0 -c pytorch`
+## RUN DEEPJ
 - `python generate.py --model archives/model.pt --style w1 w2 w3 w4 (wi means the weight of style i : [Baroque, Classical, Romantic, Modern])`
+
+## RUN Place365
+- `python run_placesCNN_basic.py`
+
+## RUN img2midi
+`python img2midi.py --model archives/model.pt --fname test.jpg [--arch resnet18 --style w1 w2 w3 w4 ...]`
