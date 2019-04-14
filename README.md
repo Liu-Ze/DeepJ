@@ -9,7 +9,6 @@ Recent advances in deep neural networks have enabled algorithms to compose music
 - cuda 9.0
 
 ## Install
-- `require: python 3.5 cuda9.0`
 - `sudo apt-get install libasound2-dev`
 - `conda create -n py35 python=3.5 anaconda`
 - `source activate py35`
