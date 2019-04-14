@@ -89,7 +89,10 @@ def main():
         styles = np.array([v for v in args.style])
         styles = [styles / styles.sum()]
     else:
-        # todo
+        # todo use place label to calculate style label
+        print("we use random styles")
+        styles =np.random.rand(4)
+        styles = [styles / styles.sum()]
         pass
 
     print('=== Loading Model ===')
