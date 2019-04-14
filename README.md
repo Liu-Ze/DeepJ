@@ -20,13 +20,11 @@ pip install -r requirements.txt
 The dataset is not provided in this repository. To train a custom model, you will need to include a MIDI dataset in the `data/` folder.
 
 ## Install
-DEEPJ:
-require: python 3.5 cuda9.0
-sudo apt-get install libasound2-dev
-conda create -n py35 python=3.5 anaconda
-source activate py35
-pip install git+https://github.com/vishnubob/python-midi@feature/python3
-git clone https://github.com/Liu-Ze/DeepJ.git
-cd DeepJ
-python generate.py --model archives/model.pt --style w1 w2 w3 w4
-(wi means the weight of style i )
+- require: python 3.5 cuda9.0
+- sudo apt-get install libasound2-dev
+- conda create -n py35 python=3.5 anaconda
+- source activate py35
+- pip install git+https://github.com/vishnubob/python-midi@feature/python3
+- git clone https://github.com/Liu-Ze/DeepJ.git
+- cd DeepJ
+- python generate.py --model archives/model.pt --style w1 w2 w3 w4 (wi means the weight of style i )
