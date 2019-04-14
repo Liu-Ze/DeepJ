@@ -27,4 +27,5 @@ The dataset is not provided in this repository. To train a custom model, you wil
 - pip install git+https://github.com/vishnubob/python-midi@feature/python3
 - git clone https://github.com/Liu-Ze/DeepJ.git
 - cd DeepJ
+- pip install -r requirements.txt
 - python generate.py --model archives/model.pt --style w1 w2 w3 w4 (wi means the weight of style i )
