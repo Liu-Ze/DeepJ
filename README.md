@@ -14,6 +14,15 @@
 - `pip install -r requirements.txt`
 - `conda install pytorch torchvision cudatoolkit=9.0 -c pytorch`
 
+## Install(WIN cpu)
+- `conda create -n py35 python=3.5 anaconda`
+- `source activate py35`
+- `pip install git+https://github.com/vishnubob/python-midi@feature/python3`
+- `git clone https://github.com/Liu-Ze/img2midi.git`
+- `cd img2midi`
+- `pip install -r requirements.txt`
+- `conda install pytorch-cpu torchvision-cpu -c pytorch`
+
 ## RUN DEEPJ
 - `python generate.py --model archives/model.pt --style w1 w2 w3 w4 (wi means the weight of style i : [Baroque, Classical, Romantic, Modern])`
 
