@@ -9,8 +9,8 @@
 - `conda create -n py35 python=3.5 anaconda`
 - `source activate py35`
 - `pip install git+https://github.com/vishnubob/python-midi@feature/python3`
-- `git clone https://github.com/Liu-Ze/DeepJ.git`
-- `cd DeepJ`
+- `git clone https://github.com/Liu-Ze/img2midi.git`
+- `cd img2midi`
 - `pip install -r requirements.txt`
 - `conda install pytorch torchvision cudatoolkit=9.0 -c pytorch`
 
