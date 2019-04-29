@@ -128,7 +128,10 @@ def main():
     model = DeepJ()
 
     if args.model:
-        model.load_state_dict(torch.load(args.model))
+        if torch.cuda.is_available(): 
+            model.load_state_dict(torch.load(args.model))
+        else:
+            model.load_state_dict(torch.load(args.model, map_location='cpu'))
     else:
         print('WARNING: No model loaded! Please specify model path.')
 
