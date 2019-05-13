@@ -63,6 +63,14 @@ def main():
         for line in class_file:
             classes.append(line.strip().split(' ')[0][3:])
     classes = tuple(classes)
+    emotion_file_name = 'place_emotion.txt'
+    place2emotion={}
+    with open(emotion_file_name) as emotion_file:
+        for line in emotion_file:
+            info = line.strip().split(' ')
+            cls = info[0][3:]
+            place2emotion[cls] = np.array([info[1],info[2],info[3],info[4]],dtype=np.float32)
+
 
     # load the test image
     img_name = args.fname
@@ -80,8 +88,13 @@ def main():
 
     print('{} prediction on {}'.format(arch, img_name))
     # output the prediction
+    styles = np.zeros(4)
+
     for i in range(0, 5):
-        print('{:.3f} -> {}'.format(probs[i], classes[idx[i]]))
+        cls_name = classes[idx[i]]
+        print('{:.3f} -> {}'.format(probs[i], cls_name))
+        styles += place2emotion[cls_name]*probs[i]
+
 
 
 #########################################################################################
@@ -89,9 +102,6 @@ def main():
         styles = np.array([v for v in args.style])
         styles = [styles / styles.sum()]
     else:
-        # todo use place label to calculate style label
-        print("we use random styles")
-        styles =np.random.rand(4)
         styles = [styles / styles.sum()]
         pass
 
